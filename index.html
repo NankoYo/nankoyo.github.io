@@ -40,28 +40,34 @@
         }
     </style>
     <script src="/main.js"></script>
-    <script type="text/javascript" src="https://cdnjs.nankoyo.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script>
-	getCDNinfo = function() {
-	$.ajax({
-		url: "/cdn-cgi/trace",
-		success: function(data, status) {
-			let areas = "Antananarivo, Madagascar - (TNR);Cape Town, South Africa - (CPT);Casablanca, Morocco - (CMN);Dar Es Salaam, Tanzania - (DAR);Djibouti City, Djibouti - (JIB);Durban, South Africa - (DUR);Johannesburg, South Africa - (JNB);Kigali, Rwanda - (KGL);Lagos, Nigeria - (LOS);Luanda, Angola - (LAD);Maputo, MZ - (MPM);Mombasa, Kenya - (MBA);Port Louis, Mauritius - (MRU);Réunion, France - (RUN);Bangalore, India - (BLR);Bangkok, Thailand - (BKK);Bandar Seri Begawan, Brunei - (BWN);Cebu, Philippines - (CEB);Chengdu, China - (CTU);Chennai, India - (MAA);Chittagong, Bangladesh - (CGP);Chongqing, China - (CKG);Colombo, Sri Lanka - (CMB);Dhaka, Bangladesh - (DAC);Dongguan, China - (SZX);Foshan, China - (FUO);Fuzhou, China - (FOC);Guangzhou, China - (CAN);Hangzhou, China - (HGH);Hanoi, Vietnam - (HAN);Hengyang, China - (HNY);Ho Chi Minh City, Vietnam - (SGN);Hong Kong - (HKG);Hyderabad, India - (HYD);Islamabad, Pakistan - (ISB);Jakarta, Indonesia - (CGK);Jinan, China - (TNA);Karachi, Pakistan - (KHI);Kathmandu, Nepal - (KTM);Kolkata, India - (CCU);Kuala Lumpur, Malaysia - (KUL);Lahore, Pakistan - (LHE);Langfang, China - (NAY);Luoyang, China - (LYA);Macau - (MFM);Malé, Maldives - (MLE);Manila, Philippines - (MNL);Mumbai, India - (BOM);Nagpur, India - (NAG);Nanning, China - (NNG);New Delhi, India - (DEL);Osaka, Japan - (KIX);Phnom Penh, Cambodia - (PNH);Qingdao, China - (TAO);Seoul, South Korea - (ICN);Shanghai, China - (SHA);Shenyang, China - (SHE);Shijiazhuang, China - (SJW);Singapore, Singapore - (SIN);Suzhou, China - (SZV);Taipei - (TPE);Thimphu, Bhutan - (PBH);Tianjin, China - (TSN);Tokyo, Japan - (NRT);Ulaanbaatar, Mongolia - (ULN);Vientiane, Laos - (VTE);Wuhan, China - (WUH);Wuxi, China - (WUX);Xi'an, China - (XIY);Yerevan, Armenia - (EVN);Zhengzhou, China - (CGO);Zuzhou, China - (CSX);Amsterdam, Netherlands - (AMS);Athens, Greece - (ATH);Barcelona, Spain - (BCN);Belgrade, Serbia - (BEG);Berlin, Germany - (TXL);Brussels, Belgium - (BRU);Bucharest, Romania - (OTP);Budapest, Hungary - (BUD);Chișinău, Moldova - (KIV);Copenhagen, Denmark - (CPH);Cork, Ireland -  (ORK);Dublin, Ireland - (DUB);Düsseldorf, Germany - (DUS);Edinburgh, United Kingdom - (EDI);Frankfurt, Germany - (FRA);Geneva, Switzerland - (GVA);Gothenburg, Sweden - (GOT);Hamburg, Germany - (HAM);Helsinki, Finland - (HEL);Istanbul, Turkey - (IST);Kyiv, Ukraine - (KBP);Lisbon, Portugal - (LIS);London, United Kingdom - (LHR);Luxembourg City, Luxembourg - (LUX);Madrid, Spain - (MAD);Manchester, United Kingdom - (MAN);Marseille, France - (MRS);Milan, Italy - (MXP);Moscow, Russia - (DME);Munich, Germany - (MUC);Nicosia, Cyprus - (LCA);Oslo, Norway - (OSL);Paris, France - (CDG);Prague, Czech Republic - (PRG);Reykjavík, Iceland - (KEF);Riga, Latvia - (RIX);Rome, Italy - (FCO);Saint Petersburg, Russia - (LED);Sofia, Bulgaria - (SOF);Stockholm, Sweden - (ARN);Tallinn, Estonia - (TLL);Thessaloniki, Greece - (SKG);Vienna, Austria - (VIE);Vilnius, Lithuania - (VNO);Warsaw, Poland - (WAW);Zagreb, Croatia - (ZAG);Zürich, Switzerland - (ZRH);Arica, Chile - (ARI);Asunción, Paraguay - (ASU);Bogotá, Colombia - (BOG);Buenos Aires, Argentina - (EZE);Curitiba, Brazil - (CWB);Fortaleza, Brazil - (FOR);Guatemala City, Guatemala - (GUA);Lima, Peru - (LIM);Medellín, Colombia - (MDE);Panama City, Panama - (PTY);Porto Alegre, Brazil - (POA);Quito, Ecuador - (UIO);Rio de Janeiro, Brazil - (GIG);São Paulo, Brazil - (GRU);Santiago, Chile - (SCL);Willemstad, Curaçao - (CUR);St. George's, Grenada - (GND);Amman, Jordan - (AMM);Baghdad, Iraq - (BGW);Baku, Azerbaijan - (GYD);Beirut, Lebanon - (BEY);Doha, Qatar - (DOH);Dubai, United Arab Emirates - (DXB);Kuwait City, Kuwait - (KWI);Manama, Bahrain - (BAH);Muscat, Oman - (MCT);Ramallah - (ZDM);Riyadh, Saudi Arabia - (RUH);Tel Aviv, Israel - (TLV);Ashburn, VA, United States - (IAD);Atlanta, GA, United States - (ATL);Boston, MA, United States - (BOS);Buffalo, NY, United States - (BUF);Calgary, AB, Canada - (YYC);Charlotte, NC, United States - (CLT);Chicago, IL, United States - (ORD);Columbus, OH, United States - (CMH);Dallas, TX, United States - (DFW);Denver, CO, United States - (DEN);Detroit, MI, United States - (DTW);Honolulu, HI, United States - (HNL);Houston, TX, United States - (IAH);Indianapolis, IN, United States - (IND);Jacksonville, FL, United States - (JAX);Kansas City, MO, United States - (MCI);Las Vegas, NV, United States - (LAS);Los Angeles, CA, United States - (LAX);McAllen, TX, United States - (MFE);Memphis, TN, United States - (MEM);Mexico City, Mexico - (MEX);Miami, FL, United States - (MIA);Minneapolis, MN, United States - (MSP);Montgomery, AL, United States - (MGM);Montréal, QC, Canada - (YUL);Nashville, TN, United States - (BNA);Newark, NJ, United States - (EWR);Norfolk, VA, United States - (ORF);Omaha, NE, United States - (OMA);Philadelphia, United States - (PHL);Phoenix, AZ, United States - (PHX);Pittsburgh, PA, United States - (PIT);Port-Au-Prince, Haiti - (PAP);Portland, OR, United States - (PDX);Queretaro, MX, Mexico - (QRO);Richmond, Virginia - (RIC);Sacramento, CA, United States - (SMF);Salt Lake City, UT, United States - (SLC);San Diego, CA, United States - (SAN);San Jose, CA, United States - (SJC);Saskatoon, SK, Canada - (YXE);Seattle, WA, United States - (SEA);St. Louis, MO, United States - (STL);Tampa, FL, United States - (TPA);Toronto, ON, Canada - (YYZ);Vancouver, BC, Canada - (YVR);Tallahassee, FL, United States - (TLH);Winnipeg, MB, Canada - (YWG);Adelaide, SA, Australia - (ADL);Auckland, New Zealand - (AKL);Brisbane, QLD, Australia - (BNE);Melbourne, VIC, Australia - (MEL);Noumea, New caledonia - (NOU);Perth, WA, Australia - (PER);Sydney, NSW, Australia - (SYD)".split(";");
-			let area = data.split("colo=")[1].split("\n")[0];
-			for (var i = 0; i < areas.length; i++) {
-				if (areas[i].indexOf(area) != -1) {
-					document.getElementById("cdn").innerHTML = areas[i];
-					break;
-				}
-			}
-		}
-	})
-}
-$(document).ready(function() {
-	getCDNinfo();
-    //页面加载完毕就获取CDN信息
-});
-    </script>
+    <script type="text/javascript" src="https://s4.zstatic.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    // 定义一个名为getCDNinfo的函数，用于获取CDN相关信息
+    getCDNinfo = function () {
+        $.ajax({
+            // 指定要请求数据的URL，这里请求的是/cdn-cgi/trace路径下的数据
+            url: "https://api.nankoyo.com/cdn-cgi/trace",
+            success: function (data) {
+                // 将一个很长的包含多个地区信息的字符串按分号进行分割，存储到areas数组中，每个元素代表一个地区信息
+                let areas = "阿塔那那利佛，马达加斯加 - (TNR);开普敦，南非 - (CPT);卡萨布兰卡，摩洛哥 - (CMN);达累斯萨拉姆，坦桑尼亚 - (DAR);吉布提市，吉布提 - (JIB);德班，南非 - (DUR);约翰内斯堡，南非 - (JNB);基加利，卢旺达 - (KGL);拉各斯，尼日利亚 - (LOS);罗安达，安哥拉 - (LAD);马普托，莫桑比克 - (MPM);蒙巴萨，肯尼亚 - (MBA);路易港，毛里求斯 - (MRU);留尼汪岛，法国 - (RUN);班加罗尔，印度 - (BLR);曼谷，泰国 - (BKK);斯里巴加湾市，文莱 - (BWN);宿务，菲律宾 - (CEB);成都，中国 - (CTU);金奈，印度 - (MAA);吉大港，孟加拉国 - (CGP);重庆，中国 - (CKG);科伦坡，斯里兰卡 - (CMB);达卡，孟加拉国 - (DAC);东莞，中国 - (SZX);佛山，中国 - (FUO);福州，中国 - (FOC);广州，中国 - (CAN);杭州，中国 - (HGH);河内，越南 - (HAN);衡阳，中国 - (HNY);胡志明市，越南 - (SGN);香港，中国 - (HKG);海得拉巴，印度 - (HYD);伊斯兰堡，巴基斯坦 - (ISB);雅加达，印度尼西亚 - (CGK);济南，中国 - (TNA);卡拉奇，巴基斯坦 - (KHI);加德满都，尼泊尔 - (KTM);加尔各答，印度 - (CCU);吉隆坡，马来西亚 - (KUL);拉合尔，巴基斯坦 - (LHE);廊坊，中国 - (NAY);洛阳，中国 - (LYA);澳门，中国 - (MFM);马累，马尔代夫 - (MLE);马尼拉，菲律宾 - (MNL);孟买，印度 - (BOM);那格浦尔，印度 - (NAG);南宁，中国 - (NNG);新德里，印度 - (DEL);大阪，日本 - (KIX);金边，柬埔寨 - (PNH);青岛，中国 - (TAO);首尔，韩国 - (ICN);上海，中国 - (SHA);沈阳，中国 - (SHE);石家庄，中国 - (SJW);新加坡，新加坡 - (SIN);苏州，中国 - (SZV);台北，中国 - (TPE);廷布，不丹 - (PBH);天津，中国 - (TSN);东京，日本 - (NRT);乌兰巴托，蒙古 - (ULN);万象，老挝 - (VTE);武汉，中国 - (WUH);无锡，中国 - (WUX);西安，中国 - (XIY);埃里温，亚美尼亚 - (EVN);郑州，中国 - (CGO);株洲，中国 - (CSX);阿姆斯特丹，荷兰 - (AMS);雅典，希腊 - (ATH);巴塞罗那，西班牙 - (BCN);贝尔格莱德，塞尔维亚 - (BEG);柏林，德国 - (TXL);布鲁塞尔，比利时 - (BRU);布加勒斯特，罗马尼亚 - (OTP);布达佩斯，匈牙利 - (BUD);基希讷乌，摩尔多瓦 - (KIV);哥本哈根，丹麦 - (CPH);科克，爱尔兰 -  (ORK);都柏林，爱尔兰 - (DUB);杜塞尔多夫，德国 - (DUS);爱丁堡，英国 - (EDI);法兰克福，德国 - (FRA);日内瓦，瑞士 - (GVA);哥德堡，瑞典 - (GOT);汉堡，德国 - (HAM);赫尔辛基，芬兰 - (HEL);伊斯坦布尔，土耳其 - (IST);基辅，乌克兰 - (KBP);里斯本，葡萄牙 - (LIS);伦敦，英国 - (LHR);卢森堡市，卢森堡 - (LUX);马德里，西班牙 - (MAD);曼彻斯特，英国 - (MAN);马赛，法国 - (MRS);米兰，意大利 - (MXP);莫斯科，俄罗斯 - (DME);慕尼黑，德国 - (MUC);尼科西亚，塞浦路斯 - (LCA);奥斯陆，挪威 - (OSL);巴黎，法国 - (CDG);布拉格，捷克共和国 - (PRG);雷克雅未克，冰岛 - (KEF);里加，拉脱维亚 - (RIX);罗马，意大利 - (FCO);圣彼得堡，俄罗斯 - (LED);索非亚，保加利亚 - (SOF);斯德哥尔摩，瑞典 - (ARN);塔林，爱沙尼亚 - (TLL);塞萨洛尼基，希腊 - (SKG);维也纳，奥地利 - (VIE);维尔纽斯，立陶宛 - (VNO);华沙，波兰 - (WAW);萨格勒布，克罗地亚 - (ZAG);苏黎世，瑞士 - (ZRH);阿里卡，智利 - (ARI);亚松森，巴拉圭 - (ASU);波哥大，哥伦比亚 - (BOG);布宜诺斯艾利斯，阿根廷 - (EZE);库里蒂巴，巴西 - (CWB);福塔莱萨，巴西 - (FOR);危地马拉城，危地马拉 - (GUA);利马，秘鲁 - (LIM);麦德林，哥伦比亚 - (MDE);巴拿马城，巴拿马 - (PTY);阿雷格里港，巴西 - (POA);基多，厄瓜多尔 - (UIO);里约热内卢，巴西 - (GIG);圣保罗，巴西 - (GRU);圣地亚哥，智利 - (SCL);威廉斯塔德，库拉索 - (CUR);圣乔治，格林纳达 - (GND);安曼，约旦 - (AMM);巴格达，伊拉克 - (BGW);巴库，阿塞拜疆 - (GYD);贝鲁特，黎巴嫩 - (BEY);多哈，卡塔尔 - (DOH);迪拜，阿联酋 - (DXB);科威特城，科威特 - (KWI);麦纳麦，巴林 - (BAH);马斯喀特，阿曼 - (MCT);拉马拉 - (ZDM);利雅得，沙特阿拉伯 - (RUH);特拉维夫，以色列 - (TLV);阿什本，美国弗吉尼亚州 - (IAD);亚特兰大，美国佐治亚州 - (ATL);波士顿，美国马萨诸塞州 - (BOS);布法罗，美国纽约州 - (BUF);卡尔加里，加拿大艾伯塔省 - (YYC);夏洛特，美国北卡罗来纳州 - (CLT);芝加哥，美国伊利诺伊州 - (ORD);哥伦布，美国俄亥俄州 - (CMH);达拉斯，美国得克萨斯州 - (DFW);丹佛，美国科罗拉多州 - (DEN);底特律，美国密歇根州 - (DTW);檀香山，美国夏威夷州 - (HNL);休斯顿，美国得克萨斯州 - (IAH);印第安纳波利斯，美国印第安纳州 - (IND);杰克逊维尔，美国佛罗里达州 - (JAX);堪萨斯城，美国密苏里州 - (MCI);拉斯维加斯，美国内华达州 - (LAS);洛杉矶，美国加利福尼亚州 - (LAX);麦卡伦，美国得克萨斯州 - (MFE);孟菲斯，美国田纳西州 - (MEM);墨西哥城，墨西哥 - (MEX);迈阿密，美国佛罗里达州 - (MIA);明尼阿波利斯，美国明尼苏达州 - (MSP);蒙哥马利，美国阿拉巴马州 - (MGM);蒙特利尔，加拿大魁北克省 - (YUL);纳什维尔，美国田纳西州 - (BNA);纽瓦克，美国新泽西州 - (EWR);诺福克，美国弗吉尼亚州 - (ORF);奥马哈，美国内布拉斯加州 - (OMA);费城，美国宾夕法尼亚州 - (PHL);凤凰城，美国亚利桑那州 - (PHX);匹兹堡，美国宾夕法尼亚州 - (PIT);太子港，海地 - (PAP);波特兰，美国俄勒冈州 - (PDX);克雷塔罗，墨西哥 - (QRO);里士满，美国弗吉尼亚州 - (RIC);萨克拉门托，美国加利福尼亚州 - (SMF);盐湖城，美国犹他州 - (SLC);圣地亚哥，美国加利福尼亚州 - (SAN);圣何塞，美国加利福尼亚州 - (SJC);萨斯卡通，加拿大萨斯喀彻温省 - (YXE);西雅图，美国华盛顿州 - (SEA);圣路易斯，美国密苏里州 - (STL);坦帕，美国佛罗里达州 - (TPA);多伦多，加拿大安大略省 - (YYZ);温哥华，加拿大不列颠哥伦比亚省 - (YVR);塔拉哈西，美国佛罗里达州 - (TLH);温尼伯，加拿大马尼托巴省 - (YWG);阿德莱德，澳大利亚南澳大利亚州 - (ADL);奥克兰，新西兰 - (AKL);布里斯班，澳大利亚昆士兰州 - (BNE);墨尔本，澳大利亚维多利亚州 - (MEL);努美阿，新喀里多尼亚 - (NOU);珀斯，澳大利亚西澳大利亚州 - (PER);悉尼，澳大利亚新南威尔士州 - (SYD)".split(";");
+                // 从获取到的数据（data）中提取特定的区域信息，通过分割字符串获取到具体的区域名称，存储到area变量中
+                let area = data.split("colo=")[1].split("\n")[0];
+                // 遍历areas数组，查找与提取到的区域名称（area）匹配的元素
+                for (var i = 0; i < areas.length; i++) {
+                    if (areas[i].indexOf(area)!= -1) {
+                        // 如果找到匹配的区域信息，将其显示在页面中id为cdn的元素内
+                        document.getElementById("cdn").innerHTML = areas[i];
+                        break;
+                    }
+                }
+            }
+        })
+    }
+    // 当页面加载完成后，调用getCDNinfo函数来获取并显示CDN信息
+    $(document).ready(function () {
+        getCDNinfo();
+    });
+</script>
     <script src="https://myhkw.cn/api/player/167490322175" id="myhk" key="167490322175" m="1"></script>
 </body>
 
